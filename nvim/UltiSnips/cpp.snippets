@@ -1,0 +1,124 @@
+snippet inc< "include std libraries" !bA
+#include <$1>
+endsnippet
+
+snippet inc" "include std libraries" !bA
+#include "$1
+endsnippet
+
+snippet ustd "description" !b
+using namespace std;
+endsnippet
+
+
+snippet main "cpp main" !b
+int main(){
+	$1
+}
+endsnippet
+
+snippet maina "cpp main" !b
+int main(int argc, char* argv[]){
+	$1
+}
+endsnippet
+
+snippet d_h "header documentation"
+/**
+	$1
+	@file $2
+	@author Daniil Latypov
+	@version $3
+ */
+endsnippet
+
+snippet d_f "func documentation"
+/**
+	$1
+	@param $2
+	@return $3
+ */
+endsnippet
+
+snippet for "description"
+for (int $1 = 0; $1 < $2; ++$1){
+	$3
+}
+endsnippet
+
+snippet class_abs "description"
+class $1{
+	public:
+		virtual $3{
+		}
+		virtual $4{
+		}
+		virtual $5{
+		}
+		virtual $6{
+		}
+		virtual $7{
+		}
+		virtual $8{
+		}
+}
+
+class $2 : $1{
+	$3{
+	}
+	$4{
+	}
+	$5{
+	}
+	$6{
+	}
+	$7{
+	}
+	$8{
+	}
+}
+endsnippet
+
+snippet class ""
+class $1{
+	$2
+};
+endsnippet
+
+snippet cout "description"
+cout << $1 << endl;
+endsnippet
+
+snippet scout "description"
+std::cout << $1 << std::endl;
+endsnippet
+
+snippet classD "description"
+class $1 : $2{
+};
+endsnippet
+
+snippet j.at
+j.at("$1").get_to(p.$2);
+endsnippet
+
+snippet this
+this->$1 = $1;
+endsnippet
+
+snippet std "" !A
+std::
+endsnippet
+
+snippet sst "" !A
+std::
+endsnippet
+
+snippet lili ""
+&& (lines[$1].substr(0,$2) == "$3=["
+				&& lines[$1].substr(lines[$1].size()-1, 1) == "]")
+endsnippet
+
+snippet dcout "" !Ab
+std::cout << $1 << std::endl; //debug_
+endsnippet

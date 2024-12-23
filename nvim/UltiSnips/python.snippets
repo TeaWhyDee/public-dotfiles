@@ -1,0 +1,22 @@
+snippet #! "" -bA
+#!/usr/bin/python3
+endsnippet
+
+snippet #p "" -bA 
+import getopt
+import sys
+
+argv = sys.argv[1:]
+opts, args = getopt.getopt(argv, 'x:y:')
+
+for o, a in opts:
+    if o == "-v":
+        verbose = True
+    else:
+        assert False, "unhandled option"
+endsnippet
+
+snippet #c "" -b 
+elif o in ("$1"):
+    $2
+endsnippet

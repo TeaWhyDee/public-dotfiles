@@ -1,0 +1,89 @@
+snippet \subse "" -A 
+$$1 \subseteq $2$
+endsnippet
+
+snippet \subs "" -bA
+\subsection*{$1}
+endsnippet
+
+snippet \sec "" -bA
+\section*{$1}
+endsnippet
+
+snippet \bold "" -b 
+\textbf{$1}
+endsnippet
+
+snippet \n "" -b 
+\newline 
+$1
+endsnippet
+
+snippet \gather "" -bA
+\begin{gather}
+$1
+\end{gather}
+endsnippet
+
+snippet \eq "" -bA
+\begin{gather*}
+$1
+\end{gather*}
+endsnippet
+
+snippet \g* "" -bA
+\begin{gather*}
+$1
+\end{gather*}
+endsnippet
+
+snippet \nicef "" -A
+\nicefrac{$1}{$2}
+endsnippet
+
+snippet \frac "" -A
+\frac{$1}{$2}
+endsnippet
+
+snippet \cases "" -bA
+\begin{cases}
+		$1
+\end{cases}
+endsnippet
+
+snippet \system "" -bA
+\begin{cases}
+		$1
+\end{cases}
+endsnippet
+
+snippet \fig "" -b
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.$3\linewidth}
+        \includegraphics[width=\linewidth]{$1}
+        \caption{$2}
+    \end{subfigure}
+\end{figure}
+endsnippet
+
+snippet \code "" -b
+\begin{lstlisting}[language=C++]
+\end{lstlisting}
+endsnippet
+
+snippet \image ""  
+\includegraphics[scale=$2]{$1}
+endsnippet
+
+snippet \inte "" -A
+\int $1
+endsnippet
+
+snippet \inf "" -A
+\infty
+endsnippet
+
+snippet \real ""  
+\mathbb{R}
+endsnippet

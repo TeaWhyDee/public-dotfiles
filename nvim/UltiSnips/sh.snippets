@@ -1,0 +1,43 @@
+snippet #p "" -b
+while [ "\$1" != "" ]; do
+    case \$1 in
+        -$1 | --$2 )
+            $3
+            ;;
+        -h | --help )
+				echo '
+		$4
+				'
+				exit
+    esac
+    shift
+done
+endsnippet
+
+snippet #date "" 
+$(date +%F_%H:%M:%S)
+endsnippet
+
+snippet #d "" 
+$(date +%F_%H:%M:%S)
+endsnippet
+
+snippet if "" -b
+if [[ $1 ]] ; then
+		$2
+fi
+endsnippet
+
+snippet int "" -b 
+declare -i $1 
+endsnippet
+
+snippet case "" -b 
+case $1 in
+		$2 )
+				$4
+				;;
+		* )
+				;;
+esac
+endsnippet

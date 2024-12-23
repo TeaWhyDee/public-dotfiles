@@ -1,0 +1,173 @@
+global !p
+def mktitle(text):
+		title = t[1].strip().replace(" ", "-").replace(":", "").lower()
+		return '<h3><a href="#' + title + '" id="' + title + '">'
+endglobal
+
+snippet html ""  -b 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style2.css">
+        <!-- <link href="css/reset.css" rel="stylesheet"> -->
+        <!-- <title>teawhydee | home </title> -->
+        <title>teawhydee | home</title>
+    </head>
+    <body>
+		$1
+    </body>
+</html>
+endsnippet
+
+snippet br "" 
+<br>
+endsnippet
+
+snippet ul "" -b 
+<ul>
+    <li>
+        $1 
+    </li>
+</ul>
+endsnippet
+
+snippet li "" -b 
+<li>
+    $1 
+</li>
+endsnippet
+
+snippet p "" -b 
+<p>
+   $1 
+</p>
+endsnippet
+
+snippet h1 "" -b 
+<h1>
+   $1 
+</h1>
+endsnippet
+
+snippet h2 "" -b 
+<h2>
+   $1 
+</h2>
+endsnippet
+
+snippet h3 "" -b 
+<h3>
+   $1 
+</h3>
+endsnippet 
+
+snippet h4 "" -b 
+<h4>
+   $1 
+</h4>
+endsnippet 
+
+snippet h5 "" -b 
+<h5>
+   $1 
+</h5>
+endsnippet 
+
+snippet div "" -b 
+<div>
+   $2 
+</div>
+endsnippet
+
+snippet divc "" -bA
+<div class="$1">
+   $2 
+</div>
+endsnippet
+
+snippet code "" -b
+<code>
+   $1 
+</code>
+endsnippet
+
+snippet em "" -b
+<em>
+   $1 
+</em>
+endsnippet
+
+snippet emc "" -bA
+<em class="$1">
+   $2 
+</em>
+endsnippet
+
+snippet a "" -b
+<a href="$1">
+   $2</a>
+endsnippet
+
+snippet title "" -b
+`!p
+snip.rv = mktitle(t[1])
+`
+$1</a></h3>
+endsnippet
+
+snippet ac "" -b
+<a class="$1" href="$2">
+   $3 
+</a>
+endsnippet
+
+snippet blog "" -b 
+<!-- F - post, U - update, D - delete -->
+<!-- N -->
+
+<div class="date">
+    <!-- Use :read !date_formatted_dots -->
+    Posted: `date +%d.%m.%Y`
+</div>
+`!p
+snip.rv = mktitle(t[1])
+`
+$1</a></h3>
+<div class="tags">
+		<a href="/blog/all.html">#all</a>
+    <!-- Use tag snippet -->
+		$2
+</div>
+<p>
+$3
+</p>
+<div class="links">
+    <a href="$4"> $5 </a>
+</div>
+endsnippet
+
+snippet header "" 
+`!p
+snip.rv = mktitle(t[1])
+`
+$1</a>
+</h3>
+endsnippet
+
+snippet tag "" 
+<a href="/blog/$1.html">#$1</a>
+endsnippet
+
+snippet img "" -b
+<a href="$1">
+<img src="$1" alt="$2"/>
+</a>
+endsnippet
+
+snippet video "" -b
+<a href="$1">
+<video src="$1" alt="$2"/>
+</a>
+endsnippet

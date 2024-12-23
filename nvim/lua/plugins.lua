@@ -1,0 +1,244 @@
+-- {{{ setup
+-- vim.cmd [[
+--     augroup packer_user_config
+--         autocmd!
+--         autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--     augroup end
+-- ]]
+vim.cmd [[
+      autocmd FileType TelescopePrompt lua require('cmp').setup.buffer { enabled = false }
+      ]]
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then return end
+
+packer.init { display = { open_fn = function()
+    return require("packer.util").float { border = "rounded" }
+end, }, }
+-- }}}
+
+return require('packer').startup(function(use)
+    -- use { 'tpope/vim-fugitive' }
+    -- use 'wbthomason/packer.nvim'
+    --
+    -- -- VISUAL
+    -- use { 'EdenEast/nightfox.nvim',
+    --     config = vim.cmd [[
+    --     if !exists("g:set_theme")
+    --         colorscheme carbonfox
+    --     end
+    --     let g:set_theme = "1"
+    --     ]] }
+    -- use { 'Pocco81/true-zen.nvim',
+    --     config = function() require('plugins.truezen') end }
+    --
+    -- -- VIMSCRIPT
+    --
+    -- use { 'tpope/vim-speeddating' }
+    -- use { 'blueyed/vim-diminactive' }
+    -- use { 'tpope/vim-repeat' }
+    -- use { 'tpope/vim-eunuch' }
+    --
+    -- use { 'qpkorr/vim-bufkill',
+    --     config = function() vim.cmd [[ 
+    --         source $HOME/.config/nvim/config/bufkill.vim
+    --         ]]
+    --     end }
+    -- use { 'mhinz/vim-startify',
+    --     config = function() vim.cmd [[ 
+    --         source $HOME/.config/nvim/config/startify.vim
+    --         ]]
+    --     end }
+    -- use { 'mbbill/undotree',
+    --     config = function() vim.cmd [[ 
+    --         source $HOME/.config/nvim/config/undotree.vim
+    --         ]]
+    --     end }
+    -- use { 'svermeulen/vim-yoink',
+    --     config = function() vim.cmd [[ 
+    --         source $HOME/.config/nvim/config/yoink.vim
+    --         ]]
+    --     end }
+    -- use { 'svermeulen/vim-subversive',
+    --     config = function() vim.cmd [[ 
+    --         source $HOME/.config/nvim/config/subversive.vim
+    --         ]]
+    --     end }
+    -- use { 'unblevable/quick-scope',
+    --     config = function() vim.cmd [[ 
+    --         source $HOME/.config/nvim/config/quickscope.vim
+    --         ]]
+    --     end }
+    -- use { 'vimwiki/vimwiki',
+    --     config = function() vim.cmd [[
+    --         source $HOME/.config/nvim/config/vimwiki.vim
+    --         ]]
+    --     end }
+    -- use { 'SirVer/ultisnips',
+    --     config = function() vim.cmd [[
+    --         source $HOME/.config/nvim/config/ultisnips.vim
+    --         ]]
+    --     end }
+    -- use { 'godlygeek/tabular' }
+    -- use { 'vimwiki/utils' }
+    -- use { 'tools-life/taskwiki' }
+    -- use { 'preservim/vimux',
+    --     config = function() vim.cmd [[
+    --         source $HOME/.config/nvim/config/vimux.vim
+    --         ]]
+    --     end }
+    -- use { 'blindFS/vim-taskwarrior',
+    --     config = function() vim.cmd [[
+    --         source $HOME/.config/nvim/lua/plugins/taskwarrior.vim
+    --         ]]
+    --     end }
+    -- use { 'jamessan/vim-gnupg' ,
+    --     config = function() vim.cmd [[ 
+    --         source $HOME/.config/nvim/config/gnupg.vim
+    --         ]]
+    --     end }
+    -- use { 'TeaWhyDee/vim-surround',
+    --     config = function() vim.cmd [[ 
+    --         source $HOME/.config/nvim/config/surround.vim
+    --         ]]
+    --     end }
+    -- use { 'jiangmiao/auto-pairs',
+    --     config = function() vim.cmd [[
+    --         source $HOME/.config/nvim/config/autopairs.vim
+    --         ]]
+    --     end }
+    -- use { 'preservim/tagbar',
+    --     config = function() vim.cmd [[
+    --         source $HOME/.config/nvim/config/tagbar.vim
+    --         ]]
+    --     end }
+    -- use { 'nvim-lualine/lualine.nvim',
+    --     config = function() vim.cmd [[
+    --         source $HOME/.config/nvim/config/lualine.vim
+    --         ]]
+    --     end }
+    -- use { 'akinsho/bufferline.nvim',
+    --     config = function() vim.cmd [[
+    --         source $HOME/.config/nvim/config/bufferline.vim
+    --         ]]
+    --     end }
+    --
+    --
+    -- -- OTHER
+    --
+    -- use { 'rcarriga/nvim-notify' }
+    -- use { 'ahmedkhalf/project.nvim',
+    --     config = function() require('plugins.project') end }
+    -- use { 'folke/which-key.nvim',
+    --     config = function() require('plugins.which-key') end}
+    -- use { 'dstein64/vim-startuptime' }
+    -- use { 'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
+    --     requires = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim", },
+    --     config = function() require('plugins.neotree') end }
+    -- use { "iamcco/markdown-preview.nvim",
+    --     run = function() vim.fn["mkdp#util#install"]() end,
+    --     config = function() require('plugins.markdown-preview') end }
+    --
+    --
+    -- -- COMPLETION
+    -- use { 'hrsh7th/nvim-cmp',
+    --     config = function() require('plugins.cmp') end }
+    -- use 'hrsh7th/cmp-buffer'
+    -- use 'quangnguyen30192/cmp-nvim-ultisnips'
+    -- use 'hrsh7th/cmp-path'
+    -- use 'hrsh7th/cmp-cmdline'
+    -- use 'hrsh7th/cmp-nvim-lsp'
+    -- use 'hrsh7th/cmp-nvim-lua'
+    -- use 'kdheepak/cmp-latex-symbols'
+    -- use 'saadparwaiz1/cmp_luasnip'
+    -- use 'L3MON4D3/LuaSnip'
+    -- use 'rafamadriz/friendly-snippets'
+    --
+    --
+    -- -- LSP
+    --
+    -- -- enable LSP
+    -- use { "neovim/nvim-lspconfig", }
+    -- use "williamboman/nvim-lsp-installer"
+    -- use { "williamboman/mason.nvim",
+    --         config = function () require("mason").setup() end, }
+    -- use { "jose-elias-alvarez/null-ls.nvim",
+    --         config = function () require("plugins.null-ls") end, }
+    --
+    -- use { "nvim-treesitter/nvim-treesitter",
+    --         config = function() require("plugins.treesitter") end,
+    --         run = ":TSUpdate", }
+    -- use "nvim-treesitter/playground"
+    -- use { "nvim-treesitter/nvim-treesitter-context", -- Top thing?
+    --         config = function() require('plugins.treecontext') end }
+    -- use { "nvim-treesitter/nvim-treesitter-textobjects",
+    --         after = "nvim-treesitter",
+    --         requires = "nvim-treesitter/nvim-treesitter",
+    --         config = function() require('plugins.treesitter-textobjects') end }
+    --
+    -- use { "folke/trouble.nvim",
+    --     requires = "kyazdani42/nvim-web-devicons",
+    --     config = function() require("plugins.trouble") end }
+    -- use { "lukas-reineke/indent-blankline.nvim",
+    --     config = function() require("plugins.indentblankline") end }
+    --
+    -- use { "nvim-telescope/telescope.nvim",
+    --     config = function() require("plugins.telescope") end, }
+    -- use { "nvim-telescope/telescope-media-files.nvim", }
+    -- use { "AckslD/nvim-neoclip.lua",
+    --     config = function() require('neoclip').setup() end }
+    -- use { "habamax/vim-godot",
+    --     config = function() require("plugins.godot") end }
+    -- use "windwp/nvim-ts-autotag"
+    -- use { "numToStr/Comment.nvim",
+    --     -- Plugin below allows to comment embedded language things
+    --     -- requires={"JoosepAlviste/nvim-ts-context-commentstring"},
+    --     config = function() require("plugins.comment") end }
+    -- use { 'lewis6991/gitsigns.nvim', tag = 'release',
+    --     config = function() require("plugins.gitsigns") end }
+    --
+    -- -- REQUIREMENTS
+    -- use 'nvim-lua/popup.nvim'
+    -- use 'nvim-lua/plenary.nvim'
+    -- Post-install/update hook with neovim command
+end)
+
+
+    -- use {
+    --   'user/repo', opt = true, branch = 'main', as = 'alias',
+    --   requires={'fir/st', {'sec/ond', opt=true}}, rocks={'lpeg', {'other', version='2.1.0'}}
+    --   ft = {'sh'}, cmd = 'VimCommand', event = 'VimEnter', LAZY LOAD
+    --   config = 'vim.cmd[[ALEEnable]]',                     AFTER LOAD
+    --   run = 'cd app && POSTINSTALL POSTUPDATE',
+    --   run = function() vim.fn['firenvim#install'](0) end
+    -- }
+    -- use_rocks 'penlight'
+    -- use '~/projects/personal/hover.nvim'
+    -- use { 'mhartington/formatter.nvim',
+    --     config = function() require("plugins.formatter") end }
+    -- use { "lukas-reineke/lsp-format.nvim",
+    --     config = function() require("plugins.lspformat") end }
+    -- use { "ziontee113/syntax-tree-surfer",
+    --     config = function() require('plugins.syntaxtreesurfer') end }
+    -- use { 'ray-x/lsp_signature.nvim',
+    --     config = function() require('plugins.lsp_signature') end }
+    -- use "p00f/nvim-ts-rainbow"
+    -- use { 'airblade/vim-gitgutter' }
+    -- use { 'itchyny/calendar.vim' }
+    -- use { 'mattn/calendar-vim' }
+    -- use { 'lilydjwg/colorizer' }
+    -- config = function() require("nightfox").setup() end }
+    -- use { 'nanozuki/tabby.nvim',
+    -- config = function() require('tabby').setup() end }
+    -- use { 'feline-nvim/feline.nvim', branch = '0.5-compat',
+    --     config = function() require('feline').setup() end}
+    -- use { 'tzachar/cmp-tabnine', run='./install.sh',
+    --     config = function() require('plugins.tabnine') end}
+        -- require("lspconfig").gopls.setup { on_attach = require("lsp-format").on_attach }
+    -- OTHER
+    -- use { 'nvim-telescope/telescope-z.nvim', }
+    -- use { "Lommix/godot.nvim",
+    --     config = function() require("plugins.godot") end }
+    -- use { "windwp/nvim-autopairs",  -- Autopairs, integrates with both cmp and treesitter
+    --     config = function() require("plugins.autopairs") end }
+
+-- vim: shiftwidth=4

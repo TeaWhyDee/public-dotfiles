@@ -1,0 +1,8 @@
+snippet INDEX ""  
+CREATE INDEX IF NOT EXISTS idx_$1_$2
+    ON public.$1 USING hash$3
+    ($2)
+    TABLESPACE pg_default;
+
+$4
+endsnippet
