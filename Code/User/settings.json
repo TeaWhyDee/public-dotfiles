@@ -1,0 +1,34 @@
+{
+  "window.zoomLevel": -0.8,
+  "python.pythonPath": "/usr/bin/python3",
+  "code-runner.executorMap": {
+    "cpp": "clear && g++ $fullFileName && ./a.out",
+    "c": "clear && g++ -Wall $fullFileName && ./a.out"
+  },
+  "code-runner.runInTerminal": true,
+  "sync.gist": "22a69a3fc65192727953c8a61943b320",
+  "git.enableSmartCommit": true,
+  "files.autoSave": "afterDelay",
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/tea/.config/nvim/init.lua",
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "explorer.confirmDragAndDrop": false,
+  "keyboard.dispatch": "keyCode",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "explorer.confirmDelete": false,
+  "haxe.executable": "/home/teawhydee/Downloads/ArmorySDK2011/ArmorySDK/Kha/Tools/haxe/haxe-linux64",
+  "kha.khaPath": "/home/teawhydee/Downloads/ArmorySDK2011/ArmorySDK/Kha",
+  "krom.kromPath": "/home/teawhydee/Downloads/ArmorySDK2011/ArmorySDK/Krom",
+  "editor.minimap.enabled": false,
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "editor.lineNumbers": "relative",
+  "workbench.colorTheme": "Dracula",
+  "workbench.tree.indent": 12,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.colorCustomizations": null,
+  "dotnet.codeLens.enableReferencesCodeLens": false
+}
