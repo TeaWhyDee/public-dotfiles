@@ -1,0 +1,25 @@
+[colors]
+transparent_background_colors = true
+
+[colors.primary]
+background = "#1e1a1a"
+
+[font]
+size = 11
+
+[terminal.shell]
+program = "/bin/fish"
+
+[window]
+dynamic_title = true
+opacity = 0.95
+
+[window.dimensions]
+columns = 188
+lines = 33
+
+[window.padding]
+x = 3
+y = 3
+
+[terminal]

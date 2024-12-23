@@ -1,0 +1,25 @@
+[colors]
+transparent_background_colors = true
+
+[colors.primary]
+background = "#1e1a1a"
+
+[font]
+size = 12
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[terminal.shell]
+program = "/bin/fish"
+
+[window]
+dynamic_title = true
+opacity = 0.95
+
+[window.padding]
+x = 3
+y = 3
+
+[terminal]
