@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+killall mpg123
+play=$(find ~/Music -maxdepth 1 -name "*.mp3" -o -name "*.ogg" -o -name "*.flac" -o -name "*.wav" | rofi -dmenu)
+ffplay "$play"
+#mpg123 $(find /media/teawhydee/USB\ DISK/music -maxdepth 1 | rofi -dmenu)
+
